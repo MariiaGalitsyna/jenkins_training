@@ -1,1 +1,1 @@
-print("This is a test: Poll CMS on EngIT Jenkins and run python script from shell")
+print("This is a test: trigger EngIT Jenkins and run python script from shell")
