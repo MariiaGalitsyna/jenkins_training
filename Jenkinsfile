@@ -7,6 +7,6 @@ node {
                java HelloWorld'''
     }
     stage('Create archive') {
-        archiveArtifacts artifacts: 'dnmgmttool.tar.gz', followSymlinks: false
+        bat 'mvn package'
     }
 }
