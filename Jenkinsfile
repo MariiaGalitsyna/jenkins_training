@@ -6,4 +6,7 @@ node {
         bat '''javac HelloWorld.java
                java HelloWorld'''
     }
+    stage('Create archive') {
+            tar file: 'dnmgmttool.tar.gz'
+    }
 }
