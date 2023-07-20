@@ -9,4 +9,7 @@ node {
     stage('store README') {
         archiveArtifacts artifacts: '*', onlyIfSuccessful: true
     }
+    stage('send email'){
+        mail bcc: '', body: 'This is a test email', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: 'mgalitsy@cisco.com'
+    }
 }    
