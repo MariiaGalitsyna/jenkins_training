@@ -10,6 +10,6 @@ node {
         archiveArtifacts artifacts: '*', onlyIfSuccessful: true
     }
     stage('send email'){
-        mail bcc: '', body: 'This is a test email', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: 'mgalitsy@cisco.com'
+        mail bcc: '', body: 'This is a test email', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: 'mariia.galitsyna@gmail.com'
     }
 }    
