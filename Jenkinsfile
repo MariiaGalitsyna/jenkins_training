@@ -7,6 +7,6 @@ node {
                java HelloWorld'''
     }
     stage('store README') {
-        archiveArtifacts artifacts: 'README*', onlyIfSuccessful: true
+        archiveArtifacts artifacts: '*', onlyIfSuccessful: true
     }
 }
