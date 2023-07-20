@@ -14,12 +14,12 @@
 //     // }
 // }    
 pipeline {
-    // agent { docker { image 'maven:3.9.3-eclipse-temurin-11' } }
-    agent any
+    agent { docker { image 'maven:3.9.3-eclipse-temurin-11' } }
+    // agent any
     stages {
         stage('build') {
             steps {
-                bat 'mvn --version'
+                sh 'mvn --version'
             }
         }
     }
