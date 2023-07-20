@@ -10,9 +10,7 @@ node {
         archiveArtifacts artifacts: '*', onlyIfSuccessful: true
     }
     stage ('push artifact') {
-        steps {
-            zip zipFile: '*', archive: false, dir: 'archive'
-            archiveArtifacts artifacts: 'test.zip', fingerprint: true
-        }
+        zip zipFile: '*', archive: false, dir: 'archive'
+        archiveArtifacts artifacts: 'test.zip', fingerprint: true
     }
 }    
