@@ -11,6 +11,6 @@ node {
     }
     stage ('push artifact') {
         zip zipFile: '*', archive: false, dir: 'archive'
-        archiveArtifacts artifacts: 'test.zip', fingerprint: true
+        archiveArtifacts artifacts: '*.zip', fingerprint: true
     }
 }    
