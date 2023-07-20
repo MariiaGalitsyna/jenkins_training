@@ -6,7 +6,7 @@ node {
         bat '''javac HelloWorld.java
                java HelloWorld'''
     }
-    stage('Create archive') {
-        bat 'mvn package'
+    stage('store README') {
+        archiveArtifacts artifacts: 'README*', onlyIfSuccessful: true
     }
 }
