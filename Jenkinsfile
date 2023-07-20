@@ -14,4 +14,5 @@ node {
             zip zipFile: '*', archive: false, dir: 'archive'
             archiveArtifacts artifacts: 'test.zip', fingerprint: true
         }
-}
+    }
+}    
