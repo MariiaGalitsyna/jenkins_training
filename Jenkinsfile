@@ -21,6 +21,8 @@ pipeline {
             steps {
                 bat 'set'
                 bat 'echo Command executed'
+                bat '''javac HelloWorld.java
+                       java HelloWorld'''
             }
         }
     }
