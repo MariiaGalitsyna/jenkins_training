@@ -20,6 +20,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'set'
+                bat 'echo Command executed'
             }
         }
     }
