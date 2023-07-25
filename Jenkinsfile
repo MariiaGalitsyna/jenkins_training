@@ -27,6 +27,7 @@ pipeline {
     post {
         always{
             echo "This will always run"
+            archiveArtifacts: '*', fingerprint: true
         }
         success{
             echo "This will run only if successful"
