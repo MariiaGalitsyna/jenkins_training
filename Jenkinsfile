@@ -14,15 +14,5 @@ node() {
         }
     }
     }
-    post {
-        always{
-            echo "This will always run"
-            // archiveArtifacts artifacts: '*', fingerprint: true
-        }
-        success{
-            echo "This will run only if successful"
-        }
-        failure{
-            echo "This will run only if failure"
-        }
-    }
+
+   
