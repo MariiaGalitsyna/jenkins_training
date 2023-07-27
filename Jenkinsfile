@@ -6,7 +6,7 @@ node {
             echo 'I execute elsewhere'
         }
     }
-    stage{
+    stage('More steps'){
         bat 'set'
         bat 'echo Command executed'
     }
