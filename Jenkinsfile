@@ -1,13 +1,18 @@
-pipeline {
+node() {
     // agent { docker { image 'maven:3.9.3-eclipse-temurin-11' } }
-    agent any
-    stages {
-        stage('build') {
-            steps {
-                bat 'set'
-                bat 'echo Command executed'
-            }
+    stage('build') {
+        {
+            bat 'set'
+            bat 'echo Command executed'
         }
+    }
+    stage('Example') {
+        if (env.BRANCH_NAME == 'master') {
+            echo 'I only execute on the master branch'
+        } else {
+            echo 'I execute elsewhere'
+        }
+    }
     }
     post {
         always{
@@ -21,4 +26,3 @@ pipeline {
             echo "This will run only if failure"
         }
     }
-}
