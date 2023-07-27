@@ -6,6 +6,10 @@ node {
             echo 'I execute elsewhere'
         }
     }
+    stage{
+        bat 'set'
+        bat 'echo Command executed'
+    }
 }
 
    
