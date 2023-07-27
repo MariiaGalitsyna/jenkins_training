@@ -7,8 +7,8 @@ node {
         }
     }
     stage('More steps'){
-        bat 'set'
-        bat 'echo Command executed'
+        set
+        echo  'Command executed'
     }
 }
 
