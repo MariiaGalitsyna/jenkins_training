@@ -1,11 +1,4 @@
-node() {
-    // agent { docker { image 'maven:3.9.3-eclipse-temurin-11' } }
-    stage('build') {
-        {
-            bat 'set'
-            bat 'echo Command executed'
-        }
-    }
+node {
     stage('Example') {
         if (env.BRANCH_NAME == 'master') {
             echo 'I only execute on the master branch'
@@ -13,6 +6,6 @@ node() {
             echo 'I execute elsewhere'
         }
     }
-    }
+}
 
    
